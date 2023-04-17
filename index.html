@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="./img/dantalion.png">   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>encrypted alura</title>
+</head>
+<body>
+    <audio autoplay  >
+        <source src="audio/my_ordinaly_life.mp3" type="audio/mpeg"> 
+
+    </audio>
+    
+        <header>
+            <div class="container_title">
+                <h1>Bienvenido a la web de cifrado</h>    
+            </div>
+        </header>    
+
+    
+    
+        <!-- Encriptador -->
+      <section class="encriptador">
+        <!-- Encriptador: convertir texto -->
+        <article class="texto-a-convertir">
+            <textarea  id="inputEntrada" class="input entrada" placeholder="Ingrese el texto aquí" oninput="this.value = this.value.toLowerCase()"></textarea>
+
+            <div class="enviar-texto">
+                <a class="btn encriptar" id="btnEncriptar" href="#">Encriptar</a>
+
+                <p class="anotacion" id="textoInvalido"><i class="bi bi-exclamation-circle-fill" style="font-size: .95rem;"></i> Solo letras sin acentos ni símbolos</p>
+                    
+                <p class="anotacion valido" id="textoValido" style="display: none;"><i class="bi bi-check-circle-fill" style="font-size: .95rem;"></i>Texto copiado</p>
+            </div>
+        </article>
+            <!-- Encriptador: mostrar texto convertido -->
+        <article class="texto-convertido">
+            <!-- Si el usuario no ha encriptado el texto, mostrar esto -->
+            <div class="no-encontrado" id="noEncontrado" style="display: flex;">
+                <img src="./img/ilustracion-gato.svg" alt="Ilustración de mensaje no encontrado " class="ilustracion">
+
+                <h2 class="subtitulo">Ningún mensaje encontrado</h2>
+
+                <p class="descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+                <!-- En caso de que sí lo haya encriptado -->
+            <div class="encontrado" id="encontrado" style="display: none;">
+                <textarea id="inputSalida" class="input salida" readonly></textarea>
+
+                <div class="botones">
+                    <button id="btnCopiar" class="btn copiar">Copiar</button>
+                    <button class="btn desencriptar" id="btnDesencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </article>
+        
+    </section>
+    <footer>
+        <div class="social-icons">
+
+       
+            <a href="https://github.com/dantalion-py" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/johan-beltran-backend-dev/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+  
+    <!--Script-->
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
